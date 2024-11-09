@@ -6,6 +6,7 @@ const IconButton = ({ icon, onClick}) => {
     <input
       type='button'
       className={`icon-button icon-button__icon-${icon}`}
+      onClick={onClick}
     />
   )
 }

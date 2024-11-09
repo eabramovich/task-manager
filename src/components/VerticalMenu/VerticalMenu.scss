@@ -1,0 +1,23 @@
+.vertical-menu {
+  margin: 0;
+  padding: 0;
+
+  .vertical-menu__item {
+    font-size: 14px;
+    color: var(--text-color);
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 19px;
+  }
+
+  .vertical-menu__item::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background: url(../../assets/menu-item.svg) no-repeat center;
+    background-size: contain ;
+  }
+}

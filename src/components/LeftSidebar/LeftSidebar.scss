@@ -1,10 +1,33 @@
 .left-sidebar {
-  
+  display: flex;
 
   .left-sidebar__control {
     display: flex;
     flex-flow: column;
+    flex-grow: 1;
     gap: 32px;
     padding: 16px 16px 0;
+    border-right: 1px solid var(--border-color);
+  }
+
+  .left-sidebar__menu {
+    border-right: 1px solid var(--border-color);
+
+    .left-sidebar__search {
+      display: flex;
+      gap: 8px;
+      padding: 16px;
+      border-bottom: 1px solid var(--border-color);
+
+      .left-sidebar__search-input-container {
+        width: 208px;
+      }
+    }
+
+    .left-sidebar__menu-container {
+      padding: 10px 16px 0;
+    }
+
+    
   }
 }

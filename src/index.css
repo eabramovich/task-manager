@@ -10,11 +10,12 @@
 
   --border-color: #D5D8DD;
   --neutral-mask: #ABB1BA;
+  --text-color: #2E3238;
 }
 
 body {
   margin: 0;
-  display: flex;
+  /* display: flex;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100vh; */
 }

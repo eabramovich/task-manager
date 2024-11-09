@@ -10,7 +10,7 @@
       border-radius: 4px;
       font-size: 14px;
       color: var(--neutral-mask);
-
+      height: 32px;
 
     }
 
@@ -24,6 +24,10 @@
 
     .form-input__field_type-search {
       background: url(../../../assets/search.png) no-repeat right 6px center;
+    }
+
+    .form-input__field_type-filter {
+      background: url(../../../assets/filter.svg) no-repeat right 6px center;
     }
 
   }
