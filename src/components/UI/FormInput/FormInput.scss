@@ -1,0 +1,30 @@
+.form-input {
+  width: 100%;
+  .form-input__wrapper {
+
+    .form-input__field {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 6px 8px;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      font-size: 14px;
+      color: var(--neutral-mask);
+
+
+    }
+
+    .form-input__field:focus {
+      outline: none;
+    }
+
+    .form-input__field::placeholder {
+      outline: none;
+    }
+
+    .form-input__field_type-search {
+      background: url(../../../assets/search.png) no-repeat right 6px center;
+    }
+
+  }
+}

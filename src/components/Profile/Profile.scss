@@ -1,0 +1,15 @@
+.profile {
+  display: flex;
+  align-items: center;
+
+  .profile__img {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+  }
+
+  .profile__user-name {
+    margin-left: 8px;
+    margin-right: 6px;
+  }
+}

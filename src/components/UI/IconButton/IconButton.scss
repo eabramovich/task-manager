@@ -1,0 +1,11 @@
+.icon-button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.icon-button__icon-settings {
+  background: url(../../../assets/settings.svg) no-repeat center;
+}
+
