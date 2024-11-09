@@ -1,5 +1,6 @@
 .task-form {
-  width: 100%;
+  flex-grow: 1;
+  max-width: calc(100% - 336px);
 
   .task-form__container {
     padding: 0 16px;
@@ -27,6 +28,17 @@
         display: flex;
         align-items: center;
         gap: 4px;
+      }
+    }
+
+    .task-form__content {
+      .task-form__title {
+        font-family: var(--heading-font);
+        font-weight: bold;
+        font-size: 24px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
   }
