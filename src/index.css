@@ -1,5 +1,8 @@
+@import "@fontsource/open-sans";
+@import "@fontsource/montserrat";
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  
   line-height: 1.5;
   font-weight: 400;
 
@@ -11,9 +14,13 @@
   --border-color: #D5D8DD;
   --neutral-mask: #ABB1BA;
   --text-color: #2E3238;
+  --blue: #0078CF;
+  --main-font: 'Open Sans', sans-serif;
+  --heading-font: 'Montserrat', sans-serif;
 }
 
 body {
+  font-family: var(--main-font);
   margin: 0;
   /* display: flex;
   min-width: 320px;
