@@ -13,6 +13,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --input-background: #FCFCFD;
   --border-color: #D5D8DD;
   --neutral-mask: #ABB1BA;
   --text-color: #2E3238;
