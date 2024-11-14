@@ -1,0 +1,23 @@
+.search-form {
+  position: relative;
+
+  .search-form__button {
+    position: absolute;
+    right: 0;
+    height: 32px;
+    width: 32px;
+    border: none;
+  }
+
+  .search-form__button:hover {
+    cursor: pointer;
+  }
+
+  .search-form__button_type_search {
+    background: url(../../../assets/search.png) no-repeat center;
+  }
+  
+  .search-form__button_type_filter {
+    background: url(../../../assets/filter.svg) no-repeat right 6px center;
+  }
+}

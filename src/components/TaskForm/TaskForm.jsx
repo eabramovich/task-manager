@@ -1,7 +1,10 @@
 import React from "react";
 import Button from "../UI/Button/Button";
+import FormField from "../UI/FormField/FormField.jsx";
+import Input from "../UI/Input/Input.jsx";
 import FormInput from "../UI/FormInput/FormInput";
 import IconButton from "../UI/IconButton/IconButton";
+import SeletField from "../UI/SearchSelect/SeletField.jsx";
 import "./TaskForm.scss";
 
 const TaskForm = ({ task }) => {
@@ -46,13 +49,7 @@ const TaskForm = ({ task }) => {
             </div>
             <div className="task-form__field-wrapper">
               <div className="task-form__input-wrapper">
-                <FormInput label="Ответственный" required={true} />
-              </div>
-              <div className="task-form__icon-button-wrapper">
-                <IconButton icon="add" />
-              </div>
-              <div className="task-form__icon-button-wrapper">
-                <IconButton icon="search" />
+                <SeletField allowMultiple={false} options={task.responsible}/>
               </div>
             </div>
             <div className="task-form__field-wrapper">
@@ -67,7 +64,18 @@ const TaskForm = ({ task }) => {
               </div>
             </div>
             <div className="task-form__field-wrapper task-form__field-wrapper_full">
-              <FormInput label="Комментарии" required={true} value={task.comments} />
+              <FormField label="Комментарии" name="comment">
+                <Input value={task.comments} name="comment"/>
+              </FormField>
+              {/* <FormInput label="Комментарии" required={true} value={task.comments} /> */}
+            </div>
+            {/* <div className="task-form__field-wrapper task-form__field-wrapper_full">
+              <FormInput label="Согласующие" required={true} />
+            </div> */}
+            <div className="task-form__field-wrapper task-form__field-wrapper_full">
+              <FormField label="Согласующие">
+                <SeletField options={task.coordinating} />
+              </FormField>
             </div>
           </div>
         </div>

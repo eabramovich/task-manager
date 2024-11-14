@@ -5,6 +5,10 @@
   border-radius: 4px;
 }
 
+.icon-button:hover {
+ cursor: pointer;
+}
+
 .icon-button__icon-settings {
   background: url(../../../assets/settings.svg) no-repeat center;
 }

@@ -1,0 +1,27 @@
+.input-field {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--text-color);
+  height: 32px;
+  background-color: var(----input-background);
+}
+
+.input-field:focus {
+  outline: none;
+}
+
+.input-field::placeholder {
+  outline: none;
+}
+
+.input-field_type_search {
+  background: url(../../../assets/search.png) no-repeat right 6px center;
+}
+
+.input-field_type_filter {
+  background: url(../../../assets/filter.svg) no-repeat right 6px center;
+}

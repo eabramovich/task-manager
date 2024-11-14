@@ -14,6 +14,8 @@
   -moz-osx-font-smoothing: grayscale;
 
   --input-background: #FCFCFD;
+  --selected-option-border: #99D5FF;
+  --selected-option-background: #E5F4FF;
   --border-color: #D5D8DD;
   --neutral-mask: #ABB1BA;
   --text-color: #2E3238;
