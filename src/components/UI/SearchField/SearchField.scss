@@ -1,0 +1,8 @@
+.search-field {
+  display: flex;
+  gap: 4px;
+
+  .search-field__wrapper {
+    flex-grow: 1;
+  }
+}

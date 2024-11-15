@@ -92,6 +92,20 @@ export const task = {
 
   ],
 
+  openedBy: [
+    {
+      id: 1,
+      name: "Андрей пивоваров"
+    }
+  ],
+
+  createdBy: [
+    {
+      id: 1,
+      name: "Андрей пивоваров"
+    }
+  ],
+
 
 
 }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import IconButton from '../IconButton/IconButton';
 import './SelectField.scss';
 
-const SelectField = ({ options, allowMultiple = true, name }) => {
+const SelectField = ({ options, allowMultiple = true }) => {
   const [selectedOptions, setSelectedOptions] = useState([...options]);
 
   // Удаление выбранного элемента
@@ -17,7 +17,7 @@ const SelectField = ({ options, allowMultiple = true, name }) => {
   }
 
   return (
-    <div id={name} className="select-field">
+    <div className="select-field">
       <div className="select-field__wrapper">
         <div className="select-field__all-options">
           {selectedOptions.map((option) => (

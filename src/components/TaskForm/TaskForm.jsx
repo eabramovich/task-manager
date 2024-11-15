@@ -4,7 +4,9 @@ import FormField from "../UI/FormField/FormField.jsx";
 import Input from "../UI/Input/Input.jsx";
 import FormInput from "../UI/FormInput/FormInput";
 import IconButton from "../UI/IconButton/IconButton";
-import SeletField from "../UI/SearchSelect/SeletField.jsx";
+import SelectField from "../UI/SelectField/SelectField.jsx";
+import SearchField from "../UI/SearchField/SearchField.jsx";
+import DateInput from "../UI/DateInput/DateInput.jsx";
 import "./TaskForm.scss";
 
 const TaskForm = ({ task }) => {
@@ -25,56 +27,73 @@ const TaskForm = ({ task }) => {
           <h1 className="task-form__title">{task.id} {task.title}</h1>
           <div className="task-form__fields-container">
             <div className="task-form__field-wrapper">
-              <FormInput label="Тема" required={true} value={task.title} />
+              <FormField label="Тема" required={true}>
+                <Input required={true} value={task.title} />
+              </FormField>
             </div>
             <div className="task-form__field-wrapper">
-              <FormInput label="Статус" required={true} value={task.status} />
+              <FormField label="Статус">
+                <Input required={true} value={task.status} />
+              </FormField>
             </div>
             <div className="task-form__field-wrapper">
-              <FormInput label="Описание" required={true} value={task.description} />
+              <FormField label="Описание">
+                <Input required={true} value={task.description} />
+              </FormField>
             </div>
             <div className="task-form__field-wrapper">
-              <div className="task-form__input-wrapper">
-              <FormInput label="Продукт" required={true} value={task.product} />
-              </div>
-              <div className="task-form__icon-button-wrapper">
-                <IconButton icon="add" />
-              </div>
+              <FormField label="Продукт">
+                <SearchField value={task.product}/>
+              </FormField>
             </div>
             <div className="task-form__field-wrapper">
-              <FormInput label="Рабочие заметки" required={true} value={task.notes} />
+              <FormField label="Рабочие заметки">
+                <Input required={true} value={task.notes} />
+              </FormField>
             </div>
             <div className="task-form__field-wrapper">
-              <FormInput label="Приоритет" required={true} value={task.priority} />
+              <FormField label="Приоритет">
+                <Input required={true} value={task.priority} />
+              </FormField>
             </div>
             <div className="task-form__field-wrapper">
-              <div className="task-form__input-wrapper">
-                <SeletField allowMultiple={false} options={task.responsible}/>
-              </div>
+              <FormField label="Ответсвенный">
+                <SelectField allowMultiple={false} options={task.responsible} />
+              </FormField>
             </div>
             <div className="task-form__field-wrapper">
-              <div className="task-form__input-wrapper">
-                <FormInput label="Группа" required={true} />
-              </div>
-              <div className="task-form__icon-button-wrapper">
-                <IconButton icon="add" />
-              </div>
-              <div className="task-form__icon-button-wrapper">
-                <IconButton icon="search" />
-              </div>
+              <FormField label="Группа">
+                <SelectField allowMultiple={false} options={task.group} />
+              </FormField>
             </div>
             <div className="task-form__field-wrapper task-form__field-wrapper_full">
-              <FormField label="Комментарии" name="comment">
-                <Input value={task.comments} name="comment"/>
+              <FormField label="Комментарии">
+                <Input value={task.comments} />
               </FormField>
-              {/* <FormInput label="Комментарии" required={true} value={task.comments} /> */}
             </div>
-            {/* <div className="task-form__field-wrapper task-form__field-wrapper_full">
-              <FormInput label="Согласующие" required={true} />
-            </div> */}
             <div className="task-form__field-wrapper task-form__field-wrapper_full">
               <FormField label="Согласующие">
-                <SeletField options={task.coordinating} />
+                <SelectField options={task.coordinating} />
+              </FormField>
+            </div>
+            <div className="task-form__field-wrapper">
+              <FormField label="Когда открыто">
+                <DateInput/>
+              </FormField>
+            </div>
+            <div className="task-form__field-wrapper">
+              <FormField label="Когда создано">
+                <Input type="date" />
+              </FormField>
+            </div>
+            <div className="task-form__field-wrapper">
+              <FormField label="Кем открыто">
+                <SelectField allowMultiple={false} options={task.openedBy} />
+              </FormField>
+            </div>
+            <div className="task-form__field-wrapper">
+              <FormField label="Кем создано">
+                <SelectField allowMultiple={false} options={task.createdBy} />
               </FormField>
             </div>
           </div>
