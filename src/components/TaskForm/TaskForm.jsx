@@ -18,7 +18,7 @@ const TaskForm = ({ task }) => {
             <p className="task-form__subtitle">Подзадача</p>
             <Button>Создать</Button>
           </div>
-          <div className="task-form__header-right-part">
+          <div className="task-form__header-right-part hide-on-mobile">
             <Button color="blue">Сохранить</Button>
             <Button>Сохранить и выйти</Button>
           </div>

@@ -23,3 +23,16 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .profile {
+    gap: 16px;
+    
+    .profile__user-name {
+      white-space: nowrap;
+      max-width: 145px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

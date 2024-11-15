@@ -4,8 +4,16 @@
   border: none;
   padding: 0;
   background: url("../../../assets/menu-toogle-close.svg") no-repeat center;
+  cursor: pointer;
 }
 
 .menu-toggle-icon_state-open {
   background: url("../../../assets/menu-toogle-open.svg") no-repeat center;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-toggle-icon {
+    width: 20px;
+    height: 20px;
+  }
 }

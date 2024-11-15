@@ -16,6 +16,7 @@
   --input-background: #FCFCFD;
   --selected-option-border: #99D5FF;
   --selected-option-background: #E5F4FF;
+  --main-background: #FFF;
   --border-color: #D5D8DD;
   --neutral-mask: #ABB1BA;
   --text-color: #2E3238;
@@ -31,4 +32,10 @@ body {
   /* display: flex;
   min-width: 320px;
   min-height: 100vh; */
+}
+
+@media screen and (max-width: 767px) {
+  .hide-on-mobile {
+    display: none;
+  }
 }

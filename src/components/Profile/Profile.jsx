@@ -12,7 +12,7 @@ const Profile = () => {
   return (
       <div className="profile">
         <img src={user.img} className="profile__img"/>
-        <p className="profile__user-name">{user.username}</p>
+        <p className="profile__user-name hide-on-mobile">{user.username}</p>
         <IconButton icon="settings"/>
       </div>
   )

@@ -16,3 +16,12 @@
     margin-left: 56px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  #root {
+    .content-wrapper_sidebar_closed {
+      max-width: 100%;
+      margin-left: 0;
+    }
+  }
+}

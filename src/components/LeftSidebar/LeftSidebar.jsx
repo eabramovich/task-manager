@@ -15,8 +15,11 @@ const LeftSidebar = ({ isOpen, toggleSidebar, children }) => {
   return (
     <div className="left-sidebar">
       <div className="left-sidebar__control">
-        <MenuToogleIcon isOpen={isOpen} onclick={toggleSidebar}/>
-        <FavoriteIcon />
+        <MenuToogleIcon isOpen={isOpen} onclick={toggleSidebar} />
+        <div className="hide-on-mobile">
+          <FavoriteIcon />
+        </div>
+
       </div>
       <div className={`left-sidebar__menu ${isOpen ? "left-sidebar__menu_open" : "left-sidebar__menu_closed"}`}>
         <div className="left-sidebar__search">
@@ -28,7 +31,7 @@ const LeftSidebar = ({ isOpen, toggleSidebar, children }) => {
           <IconButton icon="no-pin" />
         </div>
         <div className="left-sidebar__menu-container">
-          <VerticalMenu menuItems={menuData}/>
+          <VerticalMenu menuItems={menuData} />
         </div>
       </div>
       {children}

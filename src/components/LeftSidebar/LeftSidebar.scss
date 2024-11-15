@@ -2,6 +2,8 @@
   display: flex;
   position: fixed;
   height: 100%;
+  z-index: 500;
+  background-color: var(--main-background);
 
   .left-sidebar__control {
     display: flex;
@@ -10,7 +12,6 @@
     gap: 32px;
     padding: 16px 16px 0;
     border-right: 1px solid var(--border-color);
-    width: 56px;
     box-sizing: border-box;
   }
 
@@ -40,8 +41,17 @@
   }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
   .left-sidebar {
-    .left-sidebar__menu {}
+    top: 0;
+    z-index: 1500;
+    height: 56px;
+
+    // .left-sidebar__menu_closed {
+    //   width: 100%;
+    //   margin-left: 0;
+    // }
   }
+
+  
 }

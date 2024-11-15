@@ -12,9 +12,11 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__container">
-        <Logo />
+        <div className="hide-on-mobile">
+          <Logo />
+        </div>
         <div className="header__search-profile-container">
-          <div className="header__search-container">
+          <div className="header__search-container hide-on-mobile">
             {/* <FormInput icon="search" placeholder="Поиск" /> */}
             {/* <Input icon="search" placeholder="Поиск" onChange={(e) => setSearchValue(e.target.value)} value={searchValue}/> */}
             <SearchForm placeholder="Поиск" buttonType="search" />

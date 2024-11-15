@@ -80,9 +80,41 @@
 
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 992px) {
   .task-form {
     .task-form__container {
+      
+      .task-form__content {
+        .task-form__fields-container {
+          .task-form__field-wrapper {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .task-form {
+    .task-form__container {
+      .task-form__header {
+  
+        .task-form__header-left-part {
+          justify-content: space-between;
+          width: 100%;
+        }
+  
+        .task-form__header-right-part {
+          display: none;
+        }
+      }
+      .task-form__content {
+        .task-form__title {
+          font-size: 20px;
+        }
+      }
+
       .task-form__content {
         .task-form__fields-container {
           .task-form__field-wrapper {

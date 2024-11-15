@@ -8,6 +8,7 @@ import "./App.scss"
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+ 
 
   useEffect(() => {
     const handleResize = () => {
@@ -17,7 +18,12 @@ function App() {
       }
     }
 
+    const handleScroll = () => {
+      console.log(window.scrollY);
+    }
+
     window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
 
     handleResize();
   }, [])
@@ -32,7 +38,7 @@ function App() {
       <Main>
         <LeftSidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar}/>
         <div className={`content-wrapper ${isSidebarOpen ? "content-wrapper_sidebar_open" : "content-wrapper_sidebar_closed" }`}>
-          <TaskForm task={task}/>
+          <TaskForm task={task} />
         </div>
         
       </Main>
