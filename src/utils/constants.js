@@ -37,6 +37,41 @@ export const menuData = [
       { title: 'Телефон' },
     ],
   },
+  {
+    title: 'Доски задач',
+    children: [
+      { title: 'Адрес' },
+      { title: 'Телефон' },
+    ],
+  },
+  {
+    title: 'Обращения',
+    children: [
+      { title: 'Адрес' },
+      { title: 'Телефон' },
+    ],
+  },
+  {
+    title: 'События',
+    children: [
+      { title: 'Адрес' },
+      { title: 'Телефон' },
+    ],
+  },
+  {
+    title: 'Инциденты',
+    children: [
+      { title: 'Адрес' },
+      { title: 'Телефон' },
+    ],
+  },
+  {
+    title: 'Проблемы',
+    children: [
+      { title: 'Адрес' },
+      { title: 'Телефон' },
+    ],
+  },
 ];
 
 export const task = {
@@ -87,9 +122,28 @@ export const task = {
     }, 
     {
       id: 7,
-      name: "Алла Лин"
+      name: "Артем Подпрыгайко-Саппортов"
+    }, 
+    {
+      id: 8,
+      name: "Илья Вазнец"
+    }, 
+    {
+      id: 9,
+      name: "Михаил Вортенов"
+    }, 
+    {
+      id: 10,
+      name: "Наталья Нашевна"
+    }, 
+    {
+      id: 11,
+      name: "Евгения Итамовна"
+    }, 
+    {
+      id: 12,
+      name: "Алиса Киральчук"
     }
-
   ],
 
   openedBy: [

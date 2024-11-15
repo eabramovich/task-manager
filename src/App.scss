@@ -5,4 +5,14 @@
   min-width: 320px;
   min-height: 100vh;
   margin: 0 auto;
+
+  .content-wrapper_sidebar_open {
+    max-width: calc(100% - 336px);
+    margin-left: 336px;
+  }
+
+  .content-wrapper_sidebar_closed {
+    max-width: calc(100% - 56px);
+    margin-left: 56px;
+  }
 }

@@ -1,14 +1,21 @@
 .task-form {
   flex-grow: 1;
-  max-width: calc(100% - 336px);
+  //max-width: calc(100% - 336px);
+  width: 100%;
+  padding-bottom: 100px;
 
   .task-form__container {
     padding: 0 16px;
+
     .task-form__header {
       display: flex;
       width: 100%;
       height: 64px;
       justify-content: space-between;
+      position: sticky;
+      top: 48px;
+      left: 0;
+      background: #fff;
 
       .task-form__header-left-part {
         display: flex;
@@ -71,4 +78,18 @@
     }
   }
 
+}
+
+@media screen and (max-width: 991px) {
+  .task-form {
+    .task-form__container {
+      .task-form__content {
+        .task-form__fields-container {
+          .task-form__field-wrapper {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }

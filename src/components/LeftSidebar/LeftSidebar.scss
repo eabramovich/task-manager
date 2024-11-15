@@ -1,6 +1,7 @@
 .left-sidebar {
   display: flex;
-  width: 336px;
+  position: fixed;
+  height: 100%;
 
   .left-sidebar__control {
     display: flex;
@@ -9,10 +10,14 @@
     gap: 32px;
     padding: 16px 16px 0;
     border-right: 1px solid var(--border-color);
+    width: 56px;
+    box-sizing: border-box;
   }
 
   .left-sidebar__menu {
     border-right: 1px solid var(--border-color);
+    width: 280px;
+    box-sizing: border-box;
 
     .left-sidebar__search {
       display: flex;
@@ -29,6 +34,14 @@
       padding: 10px 16px 0;
     }
 
-    
+  }
+  .left-sidebar__menu_closed {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .left-sidebar {
+    .left-sidebar__menu {}
   }
 }

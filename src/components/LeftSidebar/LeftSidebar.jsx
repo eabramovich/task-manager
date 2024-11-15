@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import MenuToogleIcon from "../UI/MenuToogleIcon/MenuToogleIcon";
 import FavoriteIcon from "../UI/FavoriteIcon/FavoriteIcon";
@@ -10,15 +10,15 @@ import IconButton from "../UI/IconButton/IconButton";
 import { menuData } from "../../utils/constants";
 import "./LeftSidebar.scss";
 
-const LeftSidebar = ({ children }) => {
+const LeftSidebar = ({ isOpen, toggleSidebar, children }) => {
 
   return (
     <div className="left-sidebar">
       <div className="left-sidebar__control">
-        <MenuToogleIcon />
+        <MenuToogleIcon isOpen={isOpen} onclick={toggleSidebar}/>
         <FavoriteIcon />
       </div>
-      <div className="left-sidebar__menu">
+      <div className={`left-sidebar__menu ${isOpen ? "left-sidebar__menu_open" : "left-sidebar__menu_closed"}`}>
         <div className="left-sidebar__search">
           <div className="left-sidebar__search-container">
             {/* <FormInput icon="filter" placeholder="Поиск по меню" /> */}

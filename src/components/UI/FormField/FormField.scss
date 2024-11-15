@@ -1,6 +1,10 @@
 .form-field {
   width: 100%;
 
+  .form-field__wrapper {
+    padding-top: 4px;
+  }
+
   .form-field__label {
     font-size: 14px;
     color: var(--text-color);
@@ -8,7 +12,7 @@
   }
 
   .form-field__label_required::before {
-    content:"*";
+    content: "*";
     display: inline-block;
     color: var(--red);
     margin-right: 3px;

@@ -11,16 +11,17 @@ const Header = () => {
 
   return (
     <header className="header">
-      <Logo />
-      <div className="header__search-profile-container">
-        <div className="header__search-container">
-          {/* <FormInput icon="search" placeholder="Поиск" /> */}
-          {/* <Input icon="search" placeholder="Поиск" onChange={(e) => setSearchValue(e.target.value)} value={searchValue}/> */}
-          <SearchForm placeholder="Поиск" buttonType="search" />
+      <div className="header__container">
+        <Logo />
+        <div className="header__search-profile-container">
+          <div className="header__search-container">
+            {/* <FormInput icon="search" placeholder="Поиск" /> */}
+            {/* <Input icon="search" placeholder="Поиск" onChange={(e) => setSearchValue(e.target.value)} value={searchValue}/> */}
+            <SearchForm placeholder="Поиск" buttonType="search" />
+          </div>
+          <Profile />
         </div>
-        <Profile />
       </div>
-
     </header>
   )
 
