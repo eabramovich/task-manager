@@ -44,6 +44,7 @@
 
         .select-field__remove-btn {
           background: url(./../../../assets/close-x.svg);
+          background-repeat: no-repeat;
           border: none;
           width: 16px;
           height: 16px;
@@ -54,6 +55,7 @@
 
     .select-field__clear-btn {
       background: url(../../../assets/clear-all.svg);
+      background-repeat: no-repeat;
       border: none;
       width: 16px;
       height: 17px;
