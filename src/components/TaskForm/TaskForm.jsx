@@ -65,7 +65,7 @@ const TaskForm = ({ task, onCreateSubtask, onCloseSubtask, isSubtask = false }) 
               </FormField>
             </div>
             <div className="task-form__field-wrapper">
-              <FormField label="Рабочие заметки">
+              <FormField label="Рабочие заметки" required={true}>
                 <Input required={true} value={task.notes} />
               </FormField>
             </div>
@@ -96,12 +96,12 @@ const TaskForm = ({ task, onCreateSubtask, onCloseSubtask, isSubtask = false }) 
             </div>
             <div className="task-form__field-wrapper">
               <FormField label="Когда открыто">
-                <DateInput />
+                <Input type="date" readonly={false}/>
               </FormField>
             </div>
             <div className="task-form__field-wrapper">
               <FormField label="Когда создано">
-                <Input type="date" />
+                <Input type="date" readonly={false}/>
               </FormField>
             </div>
             <div className="task-form__field-wrapper">
