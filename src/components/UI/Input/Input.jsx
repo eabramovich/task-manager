@@ -12,6 +12,7 @@ const Input = ({ placeholder = '', type = 'text', name, value, required = false,
       className={`input-field ${icon ? `input-field_type_${icon}` : ""}`}
       placeholder={placeholder}
       required={required}
+      readOnly
     >
       {children}
     </input>

@@ -1,6 +1,6 @@
 .select-field {
   display: flex;
-  gap: 8px;
+  gap: 4px;
   position: relative;
   width: 100%;
 
@@ -8,10 +8,11 @@
     flex-grow: 1;
     border: 1px solid var(--border-color);
     border-radius: 4px;
-    padding: 3px 8px;
+    padding: 3px 30px 3px 8px;
     min-height: 32px;
     box-sizing: border-box;
     position: relative;
+    max-width: calc(100% - 72px);
 
     .select-field__all-options {
       display: flex;
@@ -32,6 +33,14 @@
         display: flex;
         align-items: center;
         gap: 8px;
+
+
+        .select-field__name {
+          display: inline-block;
+        }
+
+        .select-field__name_with-btn {
+        }
 
         .select-field__remove-btn {
           background: url(./../../../assets/close-x.svg);
@@ -54,4 +63,32 @@
       cursor: pointer;
     }
   }
+}
+
+@media screen and (max-width: 767px) {
+  .select-field {
+
+    .select-field__wrapper {
+
+      .select-field__all-options {
+
+
+        .select-field__selected-option {
+
+
+          .select-field__name {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 142px;
+          }
+
+          .select-field__name_with-btn {
+            max-width: 118px;
+          }
+        }
+      }
+    }
+  }
+
 }

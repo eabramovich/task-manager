@@ -1,8 +1,8 @@
 .task-form {
-  flex-grow: 1;
-  //max-width: calc(100% - 336px);
+  // flex-grow: 1;
   width: 100%;
   padding-bottom: 100px;
+  position: relative;
 
   .task-form__container {
     padding: 0 16px;
@@ -13,9 +13,10 @@
       height: 64px;
       justify-content: space-between;
       position: sticky;
-      top: 48px;
+      top: 0;
       left: 0;
       background: #fff;
+      z-index: 2;
 
       .task-form__header-left-part {
         display: flex;

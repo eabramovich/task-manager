@@ -30,20 +30,11 @@
 }
 
 @media screen and (max-width: 767px) {
-
-
   .header {
     left: 0;
     .header__container {
       justify-content: end;
       height: 56px;
-
-      .header__search-profile-container {
-
-        .header__search-container {
-
-        }
-      }
     }
   }
 }

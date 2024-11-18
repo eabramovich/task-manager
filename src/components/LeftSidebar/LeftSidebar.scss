@@ -33,9 +33,11 @@
 
     .left-sidebar__menu-container {
       padding: 10px 16px 0;
+      overflow: auto;
     }
 
   }
+
   .left-sidebar__menu_closed {
     display: none;
   }
@@ -47,11 +49,11 @@
     z-index: 1500;
     height: 56px;
 
-    // .left-sidebar__menu_closed {
-    //   width: 100%;
-    //   margin-left: 0;
-    // }
+
+    .left-sidebar__control {
+      border-right: none;
+    }
   }
 
-  
+
 }

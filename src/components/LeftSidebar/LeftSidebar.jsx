@@ -24,8 +24,6 @@ const LeftSidebar = ({ isOpen, toggleSidebar, children }) => {
       <div className={`left-sidebar__menu ${isOpen ? "left-sidebar__menu_open" : "left-sidebar__menu_closed"}`}>
         <div className="left-sidebar__search">
           <div className="left-sidebar__search-container">
-            {/* <FormInput icon="filter" placeholder="Поиск по меню" /> */}
-            {/* <Input icon="filter" placeholder="Поиск по меню" onChange={(e) => setSearchValue(e.target.value)} value={searchValue} /> */}
             <SearchForm placeholder="Поиск" buttonType="filter" />
           </div>
           <IconButton icon="no-pin" />

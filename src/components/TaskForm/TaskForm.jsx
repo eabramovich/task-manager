@@ -9,19 +9,37 @@ import SearchField from "../UI/SearchField/SearchField.jsx";
 import DateInput from "../UI/DateInput/DateInput.jsx";
 import "./TaskForm.scss";
 
-const TaskForm = ({ task }) => {
+const TaskForm = ({ task, onCreateSubtask, onCloseSubtask, isSubtask = false }) => {
   return (
     <div className="task-form">
       <div className="task-form__container">
         <div className="task-form__header">
-          <div className="task-form__header-left-part">
-            <p className="task-form__subtitle">Подзадача</p>
-            <Button>Создать</Button>
-          </div>
-          <div className="task-form__header-right-part hide-on-mobile">
-            <Button color="blue">Сохранить</Button>
-            <Button>Сохранить и выйти</Button>
-          </div>
+          {isSubtask && (
+            <>
+              <div className="task-form__header-left-part">
+                <p className="task-form__subtitle">Подзадача</p>
+              </div>
+              <div className="task-form__header-right-part hide-on-mobile">
+                <Button color="blue">Сохранить</Button>
+                <Button onClick={onCloseSubtask}>Отменить</Button>
+              </div>
+            </>
+          )}
+          {!isSubtask && (
+            <>
+              <div className="task-form__header-left-part">
+                <p className="task-form__subtitle">Подзадача</p>
+                <Button onClick={onCreateSubtask}>
+                  Создать
+                </Button>
+              </div>
+              <div className="task-form__header-right-part hide-on-mobile">
+                <Button color="blue">Сохранить</Button>
+                <Button>Сохранить и выйти</Button>
+              </div>
+            </>
+          )}
+
         </div>
         <div className="task-form__content">
           <h1 className="task-form__title">{task.id} {task.title}</h1>
@@ -43,7 +61,7 @@ const TaskForm = ({ task }) => {
             </div>
             <div className="task-form__field-wrapper">
               <FormField label="Продукт">
-                <SearchField value={task.product}/>
+                <SearchField value={task.product} />
               </FormField>
             </div>
             <div className="task-form__field-wrapper">
@@ -78,7 +96,7 @@ const TaskForm = ({ task }) => {
             </div>
             <div className="task-form__field-wrapper">
               <FormField label="Когда открыто">
-                <DateInput/>
+                <DateInput />
               </FormField>
             </div>
             <div className="task-form__field-wrapper">

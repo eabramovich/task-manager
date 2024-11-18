@@ -21,15 +21,15 @@ const SelectField = ({ options, allowMultiple = true }) => {
       <div className="select-field__wrapper">
         <div className="select-field__all-options">
           {selectedOptions.map((option) => (
-            <span key={option.id} className="select-field__selected-option">
-              {`${option.name}`}
+            <div key={option.id} className="select-field__selected-option">
+              <span className={`select-field__name ${allowMultiple ? "select-field__name_with-btn" : ""}`}>{`${option.name}`}</span>
               {allowMultiple && <button
                 type="button"
                 aria-label="Удалить"
                 onClick={() => handleRemoveOption(option)}
                 className="select-field__remove-btn"
               />}
-            </span>
+            </div>
           ))}
         </div>
 
